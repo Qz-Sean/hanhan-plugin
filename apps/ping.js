@@ -63,7 +63,6 @@ export class Ping extends plugin {
               '最大延迟：' + Math.floor(response.max) + 'ms\n' +
               '平均延迟：' + Math.floor(response.avg) + 'ms\n' +
               '发送数据包: ' + numberOfEchos + '\n' +
-              '丢失数据包: ' + (numberOfEchos - response.times.length) + '\n' +
               '丢包率：' + response.packetLoss + '%'
         } else {
           pingRes = `目标地址${!e.isGroup ? '(' + ipAddress + ')' : domain || ''}无法响应，请检查网络连接是否正常(是否需要代理访问？)，或该站点是否已关闭。`
